@@ -1,0 +1,8 @@
+vendor/
+node_modules/
+.idea/
+.bowerrc
+bower.json
+package.json
+composer.lock
+package-lock.json

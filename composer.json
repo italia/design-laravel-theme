@@ -1,0 +1,30 @@
+{
+    "name": "robertogallea/laravel-bootstrap-italia",
+    "description": "Easy Bootstrap-Italia integration with Laravel 5",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Roberto Gallea",
+            "email": "write@robertogallea.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "laravel/framework": "~5.1.12|~5.2.0|~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+	"autoload": {
+        "psr-4": {
+            "robertogallea\\LaravelBootstrapItalia\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "robertogallea\\LaravelBootstrapItalia\\ServiceProvider"
+            ]
+        }
+    }
+}
