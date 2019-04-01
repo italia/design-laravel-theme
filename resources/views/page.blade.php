@@ -55,12 +55,18 @@
                                 <div class="it-access-top-wrapper">
                                     @guest
                                         @if (config('bootstrap-italia.login_url'))
-                                            <button class="btn btn-primary btn-sm" href="{{ config('bootstrap-italia.login_url') }}" type="button">{{ trans('bootstrap-italia::bootstrap-italia.login') }}</button>
+                                            <button onclick="event.preventDefault(); window.location=this.getAttribute('href')"
+                                                    class="btn btn-primary btn-sm"
+                                                    href="{{ config('bootstrap-italia.login_url') }}"
+                                                    type="button">{{ trans('bootstrap-italia::bootstrap-italia.login') }}</button>
                                         @endif
                                     @endguest
-                                    @guest
+                                    @auth
                                         @if(config('bootstrap-italia.logout_method') == 'GET' || !config('bootstrap-italia.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
-                                            <button class="btn btn-primary btn-sm" href="{{ config('bootstrap-italia.logout_url') }}" type="button">{{ trans('bootstrap-italia::bootstrap-italia.logout') }}</button>
+                                            <button onclick="event.preventDefault(); window.location=this.getAttribute('href')"
+                                                    class="btn btn-primary btn-sm"
+                                                    href="{{ config('bootstrap-italia.logout_url') }}"
+                                                    type="button">{{ trans('bootstrap-italia::bootstrap-italia.logout') }}</button>
                                         @else
                                             <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                                     class="btn btn-primary btn-sm"
@@ -73,7 +79,7 @@
                                                 {{ csrf_field() }}
                                             </form>
                                         @endif
-                                    @endguest
+                                    @endauth
                                 </div>
                             </div>
                         </div>
