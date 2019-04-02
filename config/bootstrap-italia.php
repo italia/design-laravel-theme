@@ -11,6 +11,7 @@ return [
     | of your page. You can override it per page with the title section.
     | You can optionally also specify a title prefix and/or postfix.
     |
+    |--------------------------------------------------------------------------
     */
 
     'title' => 'Bootstrap Italia',
@@ -29,6 +30,7 @@ return [
     | The logo has also a tagline, used as subtitle. The owner is the
     | institution owning the application
     |
+    |--------------------------------------------------------------------------
     */
 
 
@@ -56,8 +58,11 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Appearance of the pages:
+    |--------------------------------------------------------------------------
+    |
     | slim-header-light: set to true for a white slim-header
     | small-header: set to true for a smaller header height
+    |
     |--------------------------------------------------------------------------
     */
 
@@ -67,8 +72,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Auth section, omit it or set to false/null if you do not require
+    | Auth section
+    |--------------------------------------------------------------------------
+    |
+    | omit it or set to false/null if you do not require
     | authentication
+    |
     |--------------------------------------------------------------------------
     */
 
@@ -91,8 +100,11 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Additional links.
+    |--------------------------------------------------------------------------
+    |
     | Omit or set to null/false to hide element, set type to url or route
     | according to your needs
+    |
     |--------------------------------------------------------------------------
     */
 
@@ -124,7 +136,10 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Extra components url
+    |--------------------------------------------------------------------------
+    |
     | set to null or false if you want to hide the elements
+    |
     |--------------------------------------------------------------------------
     */
 
@@ -310,6 +325,7 @@ return [
     | You can comment out the GateFilter if you don't want to use Laravel's
     | built in Gate functionality
     |
+    |--------------------------------------------------------------------------
     */
 
     'filters' => [
