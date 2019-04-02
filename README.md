@@ -343,11 +343,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(Dispatcher $events)
     {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
-            $event->menu->add('MAIN NAVIGATION');
-            $event->menu->add([
-                'text' => 'Blog',
-                'url' => 'admin/blog',
-            ]);
+            $event->menu->add_slim_header([
+                            'text' => 'Blog',
+                            'url' => 'admin/blog'
+                        ]);
+            $event->menu->add_header([
+                            'text' => 'Blog',
+                            'url' => 'admin/blog',
+                        ]);
         });
     }
 
