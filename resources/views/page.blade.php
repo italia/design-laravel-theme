@@ -179,10 +179,16 @@
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="it-brand-wrapper">
-                                <a href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-code-circle') }}"></use>
-                                    </svg>
+                                <a href="{{ (config('bootstrap-italia.routes.home.type') === 'route') ? route(config('bootstrap-italia.routes.home.route')) : url(config('bootstrap-italia.routes.home.url')) }}">
+                                    @if (config('bootstrap-italia.logo'))
+                                        @if (config('bootstrap-italia.logo.type') === 'icon')
+                                            <svg class="icon">
+                                                <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-') }}{{ config('bootstrap-italia.logo.icon') }}"></use>
+                                            </svg>
+                                        @else
+                                            <img alt="logo" class="icon" src="{{ config('bootstrap-italia.logo.url') }}">
+                                        @endif
+                                    @endif
                                     <div class="it-brand-text">
                                         <h2 class="no_toc">{!! config('bootstrap-italia.brand-text') !!}</h2>
                                         <h3 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.tagline') !!}</h3>
