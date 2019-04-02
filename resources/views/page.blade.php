@@ -248,6 +248,9 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example">
+        <svg class="icon icon-light"><use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-arrow-up') }}"></use></svg>
+    </a>
     <script src="{{ asset('vendor/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js') }}"></script>
 
 @stop
