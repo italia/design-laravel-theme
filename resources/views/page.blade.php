@@ -54,18 +54,18 @@
                                 --}}
                                 <div class="it-access-top-wrapper">
                                     @guest
-                                        @if (config('bootstrap-italia.login_url'))
+                                        @if (config('bootstrap-italia.auth.login'))
                                             <button onclick="event.preventDefault(); window.location=this.getAttribute('href')"
                                                     class="btn btn-primary btn-sm"
-                                                    href="{{ config('bootstrap-italia.login_url') }}"
+                                                    href="{{ (config('bootstrap-italia.auth.login.type') === 'route') ? route(config('bootstrap-italia.auth.login.route')) : url(config('bootstrap-italia.auth.login.url')) }}"
                                                     type="button">{{ trans('bootstrap-italia::bootstrap-italia.login') }}</button>
                                         @endif
                                     @endguest
                                     @auth
-                                        @if(config('bootstrap-italia.logout_method') == 'GET' || !config('bootstrap-italia.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
+                                        @if(strtoupper(config('bootstrap-italia.auth.logout.method')) === 'GET' || !config('bootstrap-italia.auth.logout.method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
                                             <button onclick="event.preventDefault(); window.location=this.getAttribute('href')"
                                                     class="btn btn-primary btn-sm"
-                                                    href="{{ config('bootstrap-italia.logout_url') }}"
+                                                    href="{{ (config('bootstrap-italia.auth.logout.type') === 'route') ? route(config('bootstrap-italia.auth.logout.route')) : url(config('bootstrap-italia.auth.logout.url')) }}"
                                                     type="button">{{ trans('bootstrap-italia::bootstrap-italia.logout') }}</button>
                                         @else
                                             <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
@@ -94,12 +94,18 @@
                         <div class="col-12">
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
-                                    <a href="#">
-                                        <svg class="icon">
-                                            <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-code-circle') }}"></use>
-                                        </svg>
+                                    <a href="{{ (config('bootstrap-italia.routes.home.type') === 'route') ? route(config('bootstrap-italia.routes.home.route')) : url(config('bootstrap-italia.routes.home.url')) }}">
+                                        @if (config('bootstrap-italia.logo'))
+                                            @if (config('bootstrap-italia.logo.type') === 'icon')
+                                                <svg class="icon">
+                                                    <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-') }}{{ config('bootstrap-italia.logo.icon') }}"></use>
+                                                </svg>
+                                            @else
+                                                <img alt="logo" class="icon" src="{{ config('bootstrap-italia.logo.url') }}">
+                                            @endif
+                                        @endif
                                         <div class="it-brand-text">
-                                            <h2 class="no_toc">{!! config('bootstrap-italia.logo') !!}</h2>
+                                            <h2 class="no_toc">{!! config('bootstrap-italia.brand-text') !!}</h2>
                                             <h3 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.tagline') !!}</h3>
                                         </div>
                                     </a>
@@ -113,10 +119,10 @@
                                             </ul>
                                         </div>
                                     @endif
-                                    @if (config('bootstrap-italia.search-url'))
+                                    @if (config('bootstrap-italia.routes.search'))
                                         <div class="it-search-wrapper">
                                             <span class="d-none d-md-block">{{ trans('bootstrap-italia::bootstrap-italia.search') }}</span>
-                                            <a class="search-link rounded-icon" href="{{ config('bootstrap-italia.search-url') }}" aria-label="{{ trans('bootstrap-italia::bootstrap-italia.search') }}">
+                                            <a class="search-link rounded-icon" href="{{ (config('bootstrap-italia.routes.search.type') === 'route') ? route(config('bootstrap-italia.routes.search.route')) : url(config('bootstrap-italia.routes.search.url')) }}" aria-label="{{ trans('bootstrap-italia::bootstrap-italia.search') }}">
                                                 <svg class="icon">
                                                     <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-search') }}"></use>
                                                 </svg>
@@ -178,7 +184,7 @@
                                         <use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-code-circle') }}"></use>
                                     </svg>
                                     <div class="it-brand-text">
-                                        <h2 class="no_toc">{!! config('bootstrap-italia.logo') !!}</h2>
+                                        <h2 class="no_toc">{!! config('bootstrap-italia.brand-text') !!}</h2>
                                         <h3 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.tagline') !!}</h3>
                                     </div>
                                 </a>
@@ -216,9 +222,9 @@
                                     </ul>
                                 </div>
                             @endif
-                            @if (config('bootstrap-italia.newsletter_link'))
+                            @if (config('bootstrap-italia.routes.newsletter'))
                                 <div class="pb-2">
-                                    <h4><a href="{{ config('bootstrap-italia.newsletter_link') }}" title="{{ trans('bootstrap-italia::bootstrap-italia.go_to') }}: {{ trans('bootstrap-italia::bootstrap-italia.newsletter') }}">{{ trans('bootstrap-italia::bootstrap-italia.newsletter') }}</a></h4>
+                                    <h4><a href="{{ (config('bootstrap-italia.routes.newsletter.type') === 'route') ? route(config('bootstrap-italia.routes.newsletter.route')) : url(config('bootstrap-italia.routes.newsletter.url')) }}">{{ trans('bootstrap-italia::bootstrap-italia.newsletter') }}</a></h4>
                                 </div>
                             @endif
                         </div>

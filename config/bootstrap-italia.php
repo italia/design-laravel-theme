@@ -21,16 +21,30 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Logo / tagline / owner
+    | Logo / brand-text / tagline / owner
     |--------------------------------------------------------------------------
     |
-    | This logo is displayed at the upper left corner of your pages.
-    | You can use basic HTML here if you want. The logo has also a tagline,
-    | used as subtitle. The owner is the institution owning the application
+    | Logo and brand-text are displayed at the upper left corner of your pages.
+    | You can specify an icon (with its name) or an image (with its url)
+    | The logo has also a tagline, used as subtitle. The owner is the
+    | institution owning the application
     |
     */
 
-    'logo' => 'Bootstrap Italia',
+
+    'logo' => [
+        'type' => 'icon',
+        'icon' => 'pa',
+    ],
+
+    /*
+    'logo' => [
+        'type' => 'url',
+        'url' => 'img/logo.png',
+    ],
+    */
+
+    'brand-text' => 'Bootstrap Italia',
 
     'tagline' => 'Insert your tagline',
 
@@ -53,16 +67,59 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Auth section
+    | Auth section, omit it or set to false/null if you do not require
+    | authentication
     |--------------------------------------------------------------------------
     */
 
-    'login_url'  => '/auth/login',
+    'auth' => [
 
-    'logout_method' => 'post',
+        'login' => [
+            'type' => 'route',
+            'route' => 'login',
+        ],
 
-    'logout_url'  => '/auth/logout',
+        'logout' => [
+            'type' => 'route',
+            'route' => 'logout',
+            'method' => 'post',
+        ],
 
+    ],
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional links.
+    | Omit or set to null/false to hide element, set type to url or route
+    | according to your needs
+    |--------------------------------------------------------------------------
+    */
+
+    'routes' => [
+
+        'home' => [
+            'type' => 'url',
+            'url' => '#',
+        ],
+
+        /* You can also specify a route instead
+        'home' => [
+            'type' => 'route',
+            'route' => home',
+        ],
+         */
+
+        'search' => [
+            'type' => 'url',
+            'url' => '#',
+        ],
+
+        'newsletter' => [
+            'type' => 'url',
+            'url' => '#',
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -70,10 +127,6 @@ return [
     | set to null or false if you want to hide the elements
     |--------------------------------------------------------------------------
     */
-
-    'search-url' => '/search',
-
-    'newsletter_link' => '/newsletter',
 
     'socials' => [
         [
