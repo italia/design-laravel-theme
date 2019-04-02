@@ -358,13 +358,12 @@ class AppServiceProvider extends ServiceProvider
 ```
 The configuration options are the same as in the static configuration files.
 
-A more practical example that actually uses translations and the database:
+A more practical example that actually uses the database:
 
 ```php
     public function boot(Dispatcher $events)
     {
-        $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
-            $event->menu->add(trans('menu.pages'));
+        $events->listen(BuildingMenu::class, function (BuildingMenu $event) {            
 
             $items = Page::all()->map(function (Page $page) {
                 return [
@@ -373,7 +372,7 @@ A more practical example that actually uses translations and the database:
                 ];
             });
 
-            $event->menu->add(...$items);
+            $event->menu->add_slim_header(...$items);
         });
     }
 ```
