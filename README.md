@@ -103,6 +103,8 @@ You now just return this view from your controller, as usual. Check out [Bootstr
 
 This package ships with a `make:bootstrapitalia` command that behaves exactly like `make:auth` (introduced in Laravel 5.2). In the near future it will publish auth views with bootstrap-italia styles.
 
+It will also create custom pagination links views under `vendor/pagination` folder
+
 ```
 php artisan make:bootstrapitalia
 ```

@@ -6,6 +6,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Pagination\Paginator;
 use robertogallea\LaravelBootstrapItalia\Events\BuildingMenu;
 use robertogallea\LaravelBootstrapItalia\Console\BootstrapItaliaMakeCommand;
 use robertogallea\LaravelBootstrapItalia\Console\MakeBootstrapItaliaCommand;
