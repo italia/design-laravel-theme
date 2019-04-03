@@ -241,7 +241,7 @@
         </div>
         <div class="it-footer-small-prints clearfix">
             <div class="container">
-                <h3 class="sr-only">Sezione Link Utili</h3>
+                <h3 class="sr-only">{{ trans('bootstrap-italia::bootstrap-italia.useful_links') }}</h3>
                 <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
                     @each('bootstrap-italia::partials.footer-bar-item', $bootstrapItalia->menu()['footer-bar'], 'item')
                 </ul>
@@ -252,6 +252,13 @@
     <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example">
         <svg class="icon icon-light"><use xlink:href="{{ asset('vendor/bootstrap-italia/dist/svg/sprite.svg#it-arrow-up') }}"></use></svg>
     </a>
+    <div class="cookiebar">
+        <p>{!! trans('bootstrap-italia::bootstrap-italia.cookiebar.message') !!}</p>
+        <div class="cookiebar-buttons">
+            <a href="#" class="cookiebar-btn">{!! trans('bootstrap-italia::bootstrap-italia.cookiebar.preferences') !!}</a>
+            <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">{!! trans('bootstrap-italia::bootstrap-italia.cookiebar.accept') !!}</button>
+        </div>
+    </div>
     <script src="{{ asset('vendor/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js') }}"></script>
 
 @stop
