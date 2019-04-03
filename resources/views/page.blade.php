@@ -105,7 +105,8 @@
                                             @endif
                                         @endif
                                         <div class="it-brand-text">
-                                            <h2 class="no_toc">{!! config('bootstrap-italia.brand-text') !!}</h2>
+                                            <h2 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.brand-text') !!}</h2>
+                                            <h2 class="no_toc d-block d-md-none">{!! config('bootstrap-italia.brand-text-small') !!}</h2>
                                             <h3 class="no_toc d-none d-md-block">{!! config('bootstrap-italia.tagline') !!}</h3>
                                         </div>
                                     </a>

@@ -48,6 +48,8 @@ return [
 
     'brand-text' => 'Bootstrap Italia',
 
+    'brand-text-small' => 'Bs Italia',
+
     'tagline' => 'Insert your tagline',
 
     'owner' => [
