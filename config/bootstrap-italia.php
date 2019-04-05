@@ -193,7 +193,6 @@ return [
             [
                 'url' => '#',
                 'text' => 'Pagina iniziale',
-                'can' => 'ciccio',
             ],
             [
                 'url' => 'contatti',
