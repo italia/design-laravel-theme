@@ -26,5 +26,6 @@
                 "italia\\DesignLaravelTheme\\ServiceProvider"
             ]
         }
-    }
+    },
+    "license": "BSD-3"
 }
