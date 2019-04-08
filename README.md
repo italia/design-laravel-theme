@@ -22,7 +22,7 @@ The package just provides a Blade template that you can extend and advanced menu
 1. Require the package using composer:
 
     ```
-    composer require robertogallea/laravel-bootstrap-italia
+    composer require italia/design-laravel-theme
     ```
 
 2. Add the service provider to the `providers` in `config/app.php`:
@@ -44,7 +44,7 @@ The package just provides a Blade template that you can extend and advanced menu
 1. To update this package, first update the composer package:
 
     ```
-    composer update robertogallea/laravel-bootstrap-italia
+    composer update italia/design-laravel-theme
     ```
 
 2. Then, publish the public assets with the `--force` flag to overwrite existing files
@@ -295,8 +295,8 @@ For example with Laratrust:
 
 namespace MyApp;
 
-use JeroenNoten\LaravelAdminLte\Menu\Builder;
-use JeroenNoten\LaravelAdminLte\Menu\Filters\FilterInterface;
+use italia\DesignLaravelTheme\Menu\Builder;
+use italia\DesignLaravelTheme\Menu\Filters\FilterInterface;
 use Laratrust;
 
 class MyMenuFilter implements FilterInterface
@@ -424,7 +424,7 @@ Now, you can edit the views in `resources/views/vendor/bootstrap-italia`.
 
 ## 7. Issues, Questions and Pull Requests
 
-You can report issues and ask questions in the [issues section](https://github.com/robertogallea/Laravel-BootstrapItalia/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
+You can report issues and ask questions in the [issues section](https://github.com/italia/DesignLaravelTheme/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
 
 If you have a question, check the closed issues first. Over time, I've been able to answer quite a few.
 
