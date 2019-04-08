@@ -30,13 +30,13 @@ The package just provides a Blade template that you can extend and advanced menu
     > Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider
 
     ```php
-    robertogallea\LaravelBootstrapItalia\ServiceProvider::class,
+    italia\DesignLaravelTheme\ServiceProvider::class,
     ```
 
 3. Publish the public assets:
 
     ```
-    php artisan vendor:publish --provider="robertogallea\LaravelBootstrapItalia\ServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="italia\DesignLaravelTheme\ServiceProvider" --tag=assets
     ```
 
 ## 2. Updating
@@ -50,7 +50,7 @@ The package just provides a Blade template that you can extend and advanced menu
 2. Then, publish the public assets with the `--force` flag to overwrite existing files
 
     ```
-    php artisan vendor:publish --provider="robertogallea\LaravelBootstrapItalia\ServiceProvider" --tag=assets --force
+    php artisan vendor:publish --provider="italia\DesignLaravelTheme\ServiceProvider" --tag=assets --force
     ```
 
 ## 3. Usage
@@ -117,7 +117,7 @@ This command should be used on fresh applications, just like the `make:auth` com
 First, publish the configuration file:
 
 ```
-php artisan vendor:publish --provider="robertogallea\LaravelBootstrapItalia\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="italia\DesignLaravelTheme\ServiceProvider" --tag=config
 ```
 
 Now, edit `config/bootstrap-italia.php` to configure the title, theme, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
@@ -316,9 +316,9 @@ And then add to `config/bootstrap-italia.php`:
 
 ```php
 'filters' => [
-    robertogallea\LaravelBootstrapItalia\Menu\Filters\HrefFilter::class,
-    robertogallea\LaravelBootstrapItalia\Menu\Filters\ActiveFilter::class,
-    //robertogallea\LaravelBootstrapItalia\Menu\Filters\GateFilter::class, Comment this line out
+    italia\DesignLaravelTheme\Menu\Filters\HrefFilter::class,
+    italia\DesignLaravelTheme\Menu\Filters\ActiveFilter::class,
+    //italia\DesignLaravelTheme\Menu\Filters\GateFilter::class, Comment this line out
     MyApp\MyMenuFilter::class,
 ]
 ```
@@ -335,7 +335,7 @@ To configure the menu at runtime, register a handler or callback for the `MenuBu
 
 ```php
 use Illuminate\Contracts\Events\Dispatcher;
-use robertogallea\LaravelBootstrapItalia\Events\BuildingMenu;
+use italia\DesignLaravelTheme\Events\BuildingMenu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -407,7 +407,7 @@ Just specifiy the language in `config/app.php`.
 If you need to modify the texts or add other languages, you can publish the language files:
 
 ```
-php artisan vendor:publish --provider="robertogallea\LaravelBootstrapItalia\ServiceProvider" --tag=translations
+php artisan vendor:publish --provider="italia\DesignLaravelTheme\ServiceProvider" --tag=translations
 ```
 
 Now, you can edit translations or add languages in `resources/lang/vendor/bootstrap-italia`.
@@ -417,7 +417,7 @@ Now, you can edit translations or add languages in `resources/lang/vendor/bootst
 If you need full control over the provided views, you can publish them:
 
 ```
-php artisan vendor:publish --provider="robertogallea\LaravelBootstrapItalia\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="italia\DesignLaravelTheme\ServiceProvider" --tag=views
 ```
 
 Now, you can edit the views in `resources/views/vendor/bootstrap-italia`.

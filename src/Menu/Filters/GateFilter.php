@@ -1,9 +1,9 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Menu\Filters;
+namespace italia\DesignLaravelTheme\Menu\Filters;
 
 use Illuminate\Contracts\Auth\Access\Gate;
-use robertogallea\LaravelBootstrapItalia\Menu\Builder;
+use italia\DesignLaravelTheme\Menu\Builder;
 
 class GateFilter implements FilterInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Console;
+namespace italia\DesignLaravelTheme\Console;
 
 use Illuminate\Auth\Console\MakeAuthCommand;
 

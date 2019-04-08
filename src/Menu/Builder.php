@@ -1,6 +1,6 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Menu;
+namespace italia\DesignLaravelTheme\Menu;
 
 
 class Builder

@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Roberto Gallea
- * Date: 29/03/2019
- * Time: 12:53
- */
 
-namespace robertogallea\LaravelBootstrapItalia\Events;
+namespace italia\DesignLaravelTheme\Events;
 
 
-use robertogallea\LaravelBootstrapItalia\Menu\Builder;
+use italia\DesignLaravelTheme\Menu\Builder;
 
 class BuildingMenu
 {

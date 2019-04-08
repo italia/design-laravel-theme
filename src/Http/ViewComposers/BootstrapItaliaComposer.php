@@ -1,9 +1,9 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Http\ViewComposers;
+namespace italia\DesignLaravelTheme\Http\ViewComposers;
 
 use Illuminate\View\View;
-use robertogallea\LaravelBootstrapItalia\BootstrapItalia;
+use italia\DesignLaravelTheme\BootstrapItalia;
 
 class BootstrapItaliaComposer
 {

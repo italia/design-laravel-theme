@@ -1,9 +1,9 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Menu\Filters;
+namespace italia\DesignLaravelTheme\Menu\Filters;
 
-use robertogallea\LaravelBootstrapItalia\Menu\Builder;
-use robertogallea\LaravelBootstrapItalia\Menu\ActiveChecker;
+use italia\DesignLaravelTheme\Menu\Builder;
+use italia\DesignLaravelTheme\Menu\ActiveChecker;
 
 class ActiveFilter implements FilterInterface
 {

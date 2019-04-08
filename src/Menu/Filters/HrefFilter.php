@@ -1,8 +1,8 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Menu\Filters;
+namespace italia\DesignLaravelTheme\Menu\Filters;
 
-use robertogallea\LaravelBootstrapItalia\Menu\Builder;
+use italia\DesignLaravelTheme\Menu\Builder;
 use Illuminate\Contracts\Routing\UrlGenerator;
 
 class HrefFilter implements FilterInterface

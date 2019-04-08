@@ -1,11 +1,11 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia;
+namespace italia\DesignLaravelTheme;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Container\Container;
-use robertogallea\LaravelBootstrapItalia\Menu\Builder;
-use robertogallea\LaravelBootstrapItalia\Events\BuildingMenu;
+use italia\DesignLaravelTheme\Menu\Builder;
+use italia\DesignLaravelTheme\Events\BuildingMenu;
 
 class BootstrapItalia
 {

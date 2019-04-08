@@ -330,9 +330,9 @@ return [
     */
 
     'filters' => [
-        robertogallea\LaravelBootstrapItalia\Menu\Filters\HrefFilter::class,
-        robertogallea\LaravelBootstrapItalia\Menu\Filters\ActiveFilter::class,
-        robertogallea\LaravelBootstrapItalia\Menu\Filters\GateFilter::class,
+        italia\DesignLaravelTheme\Menu\Filters\HrefFilter::class,
+        italia\DesignLaravelTheme\Menu\Filters\ActiveFilter::class,
+        italia\DesignLaravelTheme\Menu\Filters\GateFilter::class,
     ],
 
 ];

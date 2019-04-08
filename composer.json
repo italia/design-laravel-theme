@@ -1,5 +1,5 @@
 {
-    "name": "robertogallea/laravel-bootstrap-italia",
+    "name": "italia/design-laravel-theme",
     "description": "Easy Bootstrap-Italia integration with Laravel 5",
     "type": "library",
     "authors": [
@@ -17,13 +17,13 @@
     },
 	"autoload": {
         "psr-4": {
-            "robertogallea\\LaravelBootstrapItalia\\": "src/"
+            "italia\\DesignLaravelTheme\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "robertogallea\\LaravelBootstrapItalia\\ServiceProvider"
+                "italia\\DesignLaravelTheme\\ServiceProvider"
             ]
         }
     }

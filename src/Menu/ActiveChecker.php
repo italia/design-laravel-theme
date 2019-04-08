@@ -1,6 +1,6 @@
 <?php
 
-namespace robertogallea\LaravelBootstrapItalia\Menu;
+namespace italia\DesignLaravelTheme\Menu;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
