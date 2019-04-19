@@ -72,6 +72,8 @@ return [
 
     'small-header' => true,
 
+    'sticky-header' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Auth section

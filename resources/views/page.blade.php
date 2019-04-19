@@ -7,7 +7,7 @@
 
 @section('body')
     <!-- Header -->
-    <div class="it-header-wrapper">
+    <div class="it-header-wrapper {{ config('bootstrap-italia.sticky-header') ? 'it-header-sticky' : ''}}" style="{{ config('bootstrap-italia.sticky-header') ? 'z-index: 999' : ''}}">
         <div class="it-header-slim-wrapper {{ config('bootstrap-italia.slim-header-light') ? 'theme-light' : '' }}">
             <div class="container">
                 <div class="row">
