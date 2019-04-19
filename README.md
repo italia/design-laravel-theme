@@ -2,7 +2,7 @@
 
 [![Join the #design-cms-themes channel](https://img.shields.io/badge/Slack%20channel-%23design--cms--themes-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/C91K0K085)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
-[![SPID on forum.italia.it](https://img.shields.io/badge/Forum-Design-blue.svg)](https://forum.italia.it/c/design/user-interface) [![Latest Stable Version](https://poser.pugx.org/italia/design-laravel-theme/v/stable.png)](https://packagist.org/packages/italia/design-laravel-theme)
+[![Design on forum.italia.it](https://img.shields.io/badge/Forum-Design-blue.svg)](https://forum.italia.it/c/design/user-interface) [![Latest Stable Version](https://poser.pugx.org/italia/design-laravel-theme/v/stable.png)](https://packagist.org/packages/italia/design-laravel-theme)
  [![Total Downloads](https://poser.pugx.org/italia/design-laravel-theme/downloads.png)](https://packagist.org/packages/italia/design-laravel-theme)
 
 This package provides an easy way to quickly set up [Bootstrap Italia](https://italia.github.io/bootstrap-italia/) with 
