@@ -59,11 +59,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Appearance of the pages:
+    | Appearance of the pages
     |--------------------------------------------------------------------------
     |
-    | slim-header-light: set to true for a white slim-header
-    | small-header: set to true for a smaller header height
+    | - slim-header-light: set to true for a white slim-header
+    | - small-header: set to true for a smaller header height
     |
     |--------------------------------------------------------------------------
     */
@@ -79,8 +79,7 @@ return [
     | Auth section
     |--------------------------------------------------------------------------
     |
-    | omit it or set to false/null if you do not require
-    | authentication
+    | Set to false or null if you do not require authentication.
     |
     |--------------------------------------------------------------------------
     */
@@ -103,11 +102,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Additional links.
+    | Additional links
     |--------------------------------------------------------------------------
     |
-    | Omit or set to null/false to hide element, set type to url or route
-    | according to your needs
+    | Set to false or null to hide element, set type to url or route
+    | according to your needs.
     |
     |--------------------------------------------------------------------------
     */
@@ -139,10 +138,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Extra components url
+    | Extra components
     |--------------------------------------------------------------------------
     |
-    | set to null or false if you want to hide the elements
+    | Set to false or null if you want to hide the elements.
     |
     |--------------------------------------------------------------------------
     */
@@ -185,8 +184,10 @@ return [
     | Each menu item should have a text and a URL. A string instead of an array
     | represents a header. The 'can' is a filter on Laravel's built in Gate
     | functionality.
+    | 
+    | Address and contacts-links can be set to false or null.
     |
-    | See details in the readme for configuring dropdowns and megamenus
+    | See details in the readme for configuring dropdowns and megamenus.
     |
     */
 
@@ -326,7 +327,7 @@ return [
     | Choose what filters you want to include for rendering the menu.
     | You can add your own filters to this array after you've created them.
     | You can comment out the GateFilter if you don't want to use Laravel's
-    | built in Gate functionality
+    | built in Gate functionality.
     |
     |--------------------------------------------------------------------------
     */
