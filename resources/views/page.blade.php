@@ -52,6 +52,7 @@
                                     </div>
                                 </div>
                                 --}}
+                                @if (config('bootstrap-italia.auth'))
                                 <div class="it-access-top-wrapper">
                                     @guest
                                         @if (config('bootstrap-italia.auth.login'))
@@ -81,6 +82,7 @@
                                         @endif
                                     @endauth
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -204,23 +206,28 @@
                         @each('bootstrap-italia::partials.footer-menu-item', $bootstrapItalia->menu()['footer-menu'], 'item')
                     </div>
                 </section>
+                @if (config('bootstrap-italia.address') || config('bootstrap-italia.socials') || config('bootstrap-italia.routes.newsletter'))
                 <section class="py-4 border-white border-top">
                     <div class="row">
+                        @if (config('bootstrap-italia.address') || config('bootstrap-italia.contacts-links'))
                         <div class="col-lg-4 col-md-4 pb-2">
                             <h4><a href="#" title="{{ trans('bootstrap-italia::bootstrap-italia.go_to') }}: {{ trans('bootstrap-italia::bootstrap-italia.contacts') }}">{{ trans('bootstrap-italia::bootstrap-italia.contacts') }}</a></h4>
+                            @if (config('bootstrap-italia.address'))
                             <p>
                                 {!! config('bootstrap-italia.address')  !!}
                             </p>
+                            @endif
+                            @if (config('bootstrap-italia.contacts-links'))
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
                                     @each('bootstrap-italia::partials.contacts-links-item', config('bootstrap-italia.contacts-links'), 'item')
                                 </ul>
                             </div>
+                            @endif
                         </div>
-                        <div class="col-lg-4 col-md-4 pb-2">
-
-                        </div>
-                        <div class="col-lg-4 col-md-4 pb-2">
+                        @endif
+                        @if (config('bootstrap-italia.socials') || config('bootstrap-italia.routes.newsletter'))
+                        <div class="col-lg-4 col-md-4 pb-2 ml-auto">
                             @if (config('bootstrap-italia.socials'))
                                 <div class="pb-2">
                                     <h4><a href="#" title="{{ trans('bootstrap-italia::bootstrap-italia.go_to') }}: {{ trans('bootstrap-italia::bootstrap-italia.follow_us') }}">{{ trans('bootstrap-italia::bootstrap-italia.follow_us') }}</a></h4>
@@ -235,8 +242,10 @@
                                 </div>
                             @endif
                         </div>
+                        @endif
                     </div>
                 </section>
+                @endif
             </div>
         </div>
         <div class="it-footer-small-prints clearfix">
