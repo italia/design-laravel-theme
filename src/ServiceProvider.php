@@ -7,6 +7,7 @@ use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Pagination\Paginator;
+use italia\DesignLaravelTheme\Console\BootstrapItaliaAuthCommand;
 use italia\DesignLaravelTheme\Events\BuildingMenu;
 use italia\DesignLaravelTheme\Console\BootstrapItaliaMakeCommand;
 use italia\DesignLaravelTheme\Console\MakeBootstrapItaliaCommand;
@@ -98,6 +99,8 @@ class ServiceProvider extends BaseServiceProvider
             $this->commands(MakeBootstrapItaliaCommand::class);
         } elseif (class_exists('Illuminate\\Auth\\Console\\AuthMakeCommand')) {
             $this->commands(BootstrapItaliaMakeCommand::class);
+        } elseif (class_exists('Laravel\\Ui\\AuthCommand')) {
+            $this->commands(BootstrapItaliaAuthCommand::class);
         }
     }
 
