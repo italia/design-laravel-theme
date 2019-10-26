@@ -1,4 +1,4 @@
-# Easy Bootstrap-Italia integration with Laravel 5
+# Easy Bootstrap-Italia integration with Laravel 5/6
 
 [![Join the #design-cms-themes channel](https://img.shields.io/badge/Slack%20channel-%23design--cms--themes-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/C91K0K085)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
