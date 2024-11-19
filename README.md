@@ -1,4 +1,4 @@
-# Easy Bootstrap-Italia integration with Laravel 5/6
+# Easy Bootstrap-Italia integration with Laravel
 
 [![Join the #design-cms-themes channel](https://img.shields.io/badge/Slack%20channel-%23design--cms--themes-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/C91K0K085)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
@@ -6,7 +6,7 @@
  [![Total Downloads](https://poser.pugx.org/italia/design-laravel-theme/downloads.png)](https://packagist.org/packages/italia/design-laravel-theme)
 
 This package provides an easy way to quickly set up [Bootstrap Italia](https://italia.github.io/bootstrap-italia/) with 
-Laravel 5. It has no requirements and dependencies besides Laravel, so you can start building your website immediately. 
+Laravel. It has no requirements and dependencies besides Laravel, so you can start building your website immediately. 
 The package just provides a Blade template that you can extend and advanced menu configuration possibilities. 
 
 1. [Installation](#1-installation)
